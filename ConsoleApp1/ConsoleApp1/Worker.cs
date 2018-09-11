@@ -31,7 +31,6 @@ public class Writer : IWorker
     public string Name { get; set; }
     public int YearsOfExperience { get; set; }
     public string Scope { get; set; }
-    public void Write() { }
 }
 
 public class Teacher : IWorker
@@ -39,5 +38,13 @@ public class Teacher : IWorker
     public string Name { get; set; }
     public int YearsOfExperience { get; set; }
     public string Scope { get; set; }
-    public void Teach() { }
+
+    /*
+    Teacher(string Name, string YearsofExperience, string Scope)
+    {
+        this.Name = Name;
+        this.YearsOfExperience = YearsOfExperience;
+        this.Scope = Scope;
+    }
+    */
 }
