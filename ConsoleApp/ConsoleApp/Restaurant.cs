@@ -26,7 +26,7 @@ public class Restaruarnt
 
     public double GratuityRate
     {
-        get { return gratuityRate;  }
+        get { return gratuityRate; }
         set
         {
             if (value >= 0)
@@ -35,7 +35,7 @@ public class Restaruarnt
             }
         }
     }
-    
+
     //constructor
     public Restaruarnt(string name, string address, double gratuityRate)
     {
