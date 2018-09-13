@@ -84,5 +84,22 @@ namespace ConsoleApp
         {
             this.Speak(2, sit:true);
         }
+
+        void tenarySample()
+        { var value = 0;
+            if (value ==1)
+            {
+                Console.WriteLine("one");
+            }
+            else
+            {
+                Console.WriteLine("Not one");
+            }
+
+            // code above is equal as
+            // tenary
+            Console.WriteLine(value == 1 ? "one" : "Not one");
+        }
     }
+    
 }
