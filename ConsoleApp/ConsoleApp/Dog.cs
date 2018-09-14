@@ -102,4 +102,59 @@ namespace ConsoleApp
         }
     }
     
+    class Class1
+    {
+        enum Dogs { Lassie, Snoopy, Yeller }
+
+        void x()
+        {
+            var snoopy = Dogs.Snoopy;
+            switch (snoopy)
+            {
+                case Dogs.Lassie:
+                    Console.WriteLine("Hi");
+                    break;
+                case Dogs.Snoopy:
+                    Console.WriteLine("Hi");
+                    break;
+                case Dogs.Yeller:
+                    break;
+                default:
+                    throw new NotSupportedException();
+                    break;
+            }
+
+        }
+    }
+}
+
+// About inheritance
+namespace ConsoleApp2
+{
+    public class y
+    {
+        public void x()
+        {
+            var animal = new Animal();
+            var dog = new Dog();
+            var poodle = new Poodle();
+
+            TakeAnmial(animal);
+        }
+        public void TakeAnmial(Animal a)
+        {
+            a.Temp = 10;
+            //var dog = (Dog)a;
+
+            if (a is Dog)
+            {
+                var dog = a as Dog;
+                if (dog != null)
+                    dog.Name = "Daren";
+            }
+        }
+    }
+    public class Animal { public int Temp { get; set; }}
+    public class Dog : Animal { public string Name { get; set; }}
+    public class Poodle : Dog { public string Groomer { get; set; }}
 }
